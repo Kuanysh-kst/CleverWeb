@@ -1,26 +1,96 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	padding: 0;
-	border: 0;
-	font-size: 100%;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  padding: 0;
+  border: 0;
+  font-size: 100%;
 }
+
 * {
   padding: 0;
   list-style: none;
   text-decoration: none;
   font-family: "Inter", sans-serif;
 }
+
 body {
   background-color: #1b0627;
   color: white;
@@ -29,45 +99,25 @@ body {
   display: -ms-flex;
   display: -o-flex;
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
 }
+
 p {
   color: rgba(255, 255, 255, 0.7);
 }
-.image-prew {
-  width: 500px;
-  height: 500px;
-  margin-left: 100px;
+
+a {
+  color: white;
 }
-.prew-buttons {
-  align-items: center;
-  display: flex;
-}
-.prew-buttons a {
-  font-size: 20px;
-  margin-right: 30px;
-}
-.prew {
-  display: flex;
-  justify-content: space-between;
-}
-.prew h1 {
-  font-size: 48px;
-  margin-top: 120px;
-}
-.prew p {
-  line-height: 40px;
-  margin-top: 10px;
-  margin-bottom: 40px;
-}
+
+/* Container */
 .container {
   width: 1300px;
   margin: 0 auto;
   padding: 0 15px;
 }
-a {
-  color: white;
-}
+
+/* Header */
 .header {
   height: 130px;
   display: block;
@@ -79,6 +129,7 @@ a {
   align-items: center;
   justify-content: space-between;
 }
+/* Navigation */
 .navigation {
   display: flex;
 }
@@ -89,6 +140,34 @@ a {
 .navigation li a {
   font-size: 20px;
 }
+
+/* Prew */
+.prew {
+  display: flex;
+  justify-content: space-between;
+}
+.image-prew {
+  width: 500px;
+  height: 500px;
+  margin-left: 100px;
+}
+.prew h1 {
+  font-size: 48px;
+  margin-top: 120px;
+}
+.prew p {
+  line-height: 40px;
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+.prew-buttons {
+  align-items: center;
+  display: flex;
+}
+.prew-buttons a {
+  font-size: 20px;
+  margin-right: 30px;
+}
 .button-one {
   background-color: #7c01c7;
   border-radius: 15px;
@@ -98,7 +177,7 @@ a {
   padding: 20px 30px;
   transition: 0.18s;
 }
-.button-one:hover{
+.button-one:hover {
   background-color: #d591ff;
 }
 .button-two {
@@ -110,9 +189,11 @@ a {
   border: 3px solid #4ad687;
   transition: 0.18s;
 }
-.button-two:hover{
+.button-two:hover {
   background-color: #4ad687;
 }
+
+/* Line */
 .line {
   background: #7c01c7;
   width: 100%;
@@ -132,6 +213,57 @@ a {
   color: transparent;
   -webkit-text-stroke: 1px white;
 }
+
+/* pebbles */
+.container-pebbles h1 {
+  text-align: center;
+  margin: 120px 0 100px 0;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 24px;
+}
+.pebbles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.pebbles .pebble {
+  width: 30%;
+  position: relative;
+}
+.pebbles .pebble h5 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 24px;
+}
+.pebbles .pebble p {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  margin-left: 20px;
+}
+.num-behind {
+  font-size: 80px;
+  line-height: 80x;
+  color: rgba(124, 1, 199, 0.15);
+  position: absolute;
+  top: -10px;
+  left: -40px;
+}
+.pebble:nth-child(3n + 2) {
+  margin-top: 120px;
+}
+.pebble:nth-child(even)::before {
+  content: url(/dist/images/Vector\ \(5\).svg);
+  position: absolute;
+  top: -100px;
+  left: -170px;
+  transform: scale(0.82);
+}
+.pebble:nth-child(even) .num-behind {
+  color: rgba(74, 214, 136, 0.35);
+}
+/* Icon-Table */
 .second-prew {
   margin-top: 120px;
   display: flex;
@@ -182,6 +314,8 @@ a {
   margin-left: 5px;
   margin-right: 5px;
 }
+
+/* O nas */
 .prew-three {
   margin-top: 120px;
   display: flex;
@@ -229,6 +363,8 @@ a {
   line-height: 40px;
   color: #ffffff;
 }
+
+/* How we work */
 .how-work h1 {
   font-weight: 700;
   font-size: 40px;
@@ -257,6 +393,22 @@ a {
   flex-wrap: wrap;
   justify-content: space-between;
 }
+
+/* Protfolio */
+.prew-four {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 70px;
+}
+.prew-four h1 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 36px;
+  margin-top: 100px;
+}
+
+/* Slider */
 .slider {
   padding-top: 20px;
   justify-content: space-between;
@@ -318,18 +470,8 @@ a {
   width: 40px;
   border-radius: 0%;
 }
-.prew-four {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 70px;
-}
-.prew-four h1 {
-  font-weight: 700;
-  font-size: 40px;
-  line-height: 36px;
-  margin-top: 100px;
-}
+
+/* Form */
 .prew-five {
   margin-top: 120px;
   display: flex;
@@ -398,13 +540,13 @@ a {
   width: 45%;
 }
 
+/* Bottom */
 .bottom {
   margin-top: 110px;
   background-color: rgba(124, 1, 199, 0.25);
   height: 250px;
   padding-top: 3%;
 }
-
 .bottom .container {
   align-items: center;
   display: flex;
@@ -418,58 +560,4 @@ a {
 .right-bottom .row-bottom {
   width: 250px;
   margin: 0 10px 0 10px;
-}
-
-/* pebbles */
-.container-pebbles h1 {
-  text-align: center;
-  margin: 120px 0 100px 0;
-  font-weight: 700;
-  font-size: 40px;
-  line-height: 24px;
-}
-.pebbles {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-.pebbles .pebble {
-  width: 30%;
-  position: relative;
-}
-
-.pebbles .pebble h5 {
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 24px;
-}
-.pebbles .pebble p {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 24px;
-  margin-left: 20px;
-}
-.num-behind {
-  font-size: 80px;
-  line-height: 80x;
-  color: rgba(124, 1, 199, 0.15);
-  position: absolute;
-  top:-10px;
-  left: -40px;
-}
-.pebble:nth-child(3n+2)
-{
-   margin-top: 120px;
-}
-.pebble:nth-child(even)::before
-{
-  content: url(/dist/images/Vector\ \(5\).svg);
-  position: absolute;
-  top: -100px;
-  left: -170px;
-  transform: scale(0.82);
-}
-.pebble:nth-child(even) .num-behind
-{
-  color: rgba(74, 214, 136, 0.35);
 }
